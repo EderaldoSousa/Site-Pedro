@@ -20,23 +20,32 @@ body, html {
   justify-content: center;
   text-align: center;
   color: white;
-  backdrop-filter: brightness(0.5);
+  padding: 20px;
 }
 
 .conteudo {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 40px;
   border-radius: 16px;
+  width: 100%;
+  max-width: 600px;
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 2.5em;
   margin-bottom: 10px;
 }
 
 p {
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin-bottom: 30px;
+}
+
+.botoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
 }
 
 .botoes a {
@@ -44,7 +53,6 @@ p {
   background-color: #ffffff;
   color: #000000;
   padding: 12px 24px;
-  margin: 10px;
   border-radius: 8px;
   transition: 0.3s;
   font-weight: bold;
@@ -53,4 +61,24 @@ p {
 .botoes a:hover {
   background-color: #f1c40f;
   color: black;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 480px) {
+  .conteudo {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .botoes a {
+    width: 100%;
+    text-align: center;
+  }
 }
